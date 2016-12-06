@@ -17,6 +17,8 @@ public class ArrayListDemo1 {
 		names.add("강감찬");
 		names.add("김치열");
 		names.add("김구");
+		
+		//
 		for (String name : names) {
 			String sub1 = name.substring(0,1);
 		/*
