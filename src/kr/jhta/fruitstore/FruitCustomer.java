@@ -3,9 +3,10 @@ package kr.jhta.fruitstore;
 public class FruitCustomer {
 	private String name;
 	private String tel;
-	
-	public FruitCustomer() {}
-	
+
+	public FruitCustomer() {
+	}
+
 	public FruitCustomer(String name, String tel) {
 		super();
 		this.name = name;
@@ -27,6 +28,5 @@ public class FruitCustomer {
 	public void setTel(String tel) {
 		this.tel = tel;
 	}
-	
-	
+
 }

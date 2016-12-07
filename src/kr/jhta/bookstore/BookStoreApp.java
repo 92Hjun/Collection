@@ -3,9 +3,11 @@ package kr.jhta.bookstore;
 import java.util.Scanner;
 
 public class BookStoreApp {
+	private static Scanner sc;
+
 	public static void main(String[] args) {
 
-		Scanner sc = new Scanner(System.in);
+		sc = new Scanner(System.in);
 		Bookstore store = new Bookstore();
 		
 		while (true) { // 무한루프

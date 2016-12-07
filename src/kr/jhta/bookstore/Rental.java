@@ -5,14 +5,14 @@ import java.util.Date;
 public class Rental {
 	private Customer customer;
 	private Book book;
-	private Date rnetDate;
+	private Date rentDate;
 	private boolean isBack;
 	
-	public Rental(Customer customer, Book book, Date rnetDate, boolean isBack) {
+	public Rental(Customer customer, Book book, Date rentDate, boolean isBack) {
 		super();
 		this.customer = customer;
 		this.book = book;
-		this.rnetDate = rnetDate;
+		this.rentDate = rentDate;
 		this.isBack = isBack;
 	}
 	
@@ -33,10 +33,10 @@ public class Rental {
 		this.book = book;
 	}
 	public Date getRentDate() {
-		return rnetDate;
+		return rentDate;
 	}
 	public void setRentDate(Date rnetDate) {
-		this.rnetDate = rnetDate;
+		this.rentDate = rnetDate;
 	}
 	public boolean getIsBack() {
 		return isBack;

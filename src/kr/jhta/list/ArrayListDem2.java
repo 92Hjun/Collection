@@ -12,10 +12,10 @@ public class ArrayListDem2 {
 		*/
 		ArrayList<String> name = new ArrayList<>();
 		ArrayList<String> kim = new ArrayList<>();
-		name.add("장해영");
+		name.add("홍길동");
 		name.add("김유신");
-		name.add("홍길동");
-		name.add("홍길동");
+		name.add("익익익");
+		name.add("강강강");
 		name.add("김구");
 		name.add("김치열");
 		name.add("이김신");

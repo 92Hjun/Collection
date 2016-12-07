@@ -1,14 +1,11 @@
 package kr.jhta.fruitstore;
 
-import java.security.PublicKey;
 import java.util.*;
 
-import kr.jhta.bookstore.Customer;
 
 public class FruitShop {
 	ArrayList<FruitCustomer> fruitCustomers = new ArrayList<>();
 	ArrayList<Fruit> fruits = new ArrayList<>();
-	ArrayList<FruitDel> fruitDel = new ArrayList<>();
 	ArrayList<BuyFruit> buyfruit = new ArrayList<>();
 	Scanner sc = new Scanner(System.in);
 	
@@ -62,6 +59,7 @@ public class FruitShop {
 				buyfruits.setFruitCustomer(loginUser);
 				buyfruit.add(buyfruits);
 				
+				
 			}
 		}
 	}
@@ -72,19 +70,20 @@ public class FruitShop {
 		}
 	}
 	public void freshFruit () {
-		FruitDel fruitDel = new FruitDel();
-		if (!fruitDel.isDel()) {
-			System.out.print("배송하실 주소를 입력해주세요>");
-			fruitDel.setAdd(sc.nextLine());
-			System.out.println("배송신청이 완료 되었습니다.");
-			fruitDel.setDel(true);
-		}else {
-			System.out.println("과일을 구매해 주세요.");
+		System.out.print("배송신청하실 과일을 입력해 주세요>");
+		String a = sc.nextLine();
+		for (BuyFruit b : buyfruit) {
+			if (b.getFruit().getFruit().equals(a)) {
+				b.setDel(true);
+				System.out.println(b.getFruit().getFruit()+"의 배송신청이 완료되었습니다.");
+			}
 		}
-	}
+		
+		}
+	
 	public void delibery() {
 		for (BuyFruit f : buyfruit) {
-			System.out.println(f.getFruitCustomer().getName()+"님의 " + f.getFruit().getFruit() + "물품 배송여부 : ");
+			System.out.println(f.getFruitCustomer().getName()+"님의 " + f.getFruit().getFruit() + " 물품 배송여부 : "+ f.getDel());
 		}
 	}
 	
