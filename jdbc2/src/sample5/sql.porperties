@@ -1,0 +1,12 @@
+getJobsBySalary = select job_id, job_title, min_salary, max_salary \
+			  	  from jobs \
+			  	  where min_salary <= ? and max_salary >= ? \
+			 	  order by job_id 
+getJobsById = select job_id, job_title,min_salary,max_salary \
+			  from jobs \
+			  where job_id = ?
+			  
+getAllEmployees = select employee_id, first_name, job_id, salary, hire_date \
+				  from employees \
+				  order by employee_id
+				
