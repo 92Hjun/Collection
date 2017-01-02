@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample2.HRcontroller">
+   <children>
+      <SplitPane dividerPositions="0.29797979797979796" layoutX="172.0" layoutY="120.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TableView fx:id="deptTable" layoutY="106.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+                    <columns>
+                      <TableColumn fx:id="deptIdColumn" prefWidth="75.0" text="부서 번호" />
+                      <TableColumn fx:id="deptNameColumn" prefWidth="75.0" text="부서 이름" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+                  <Label layoutX="14.0" layoutY="14.0" text="부서 목록" textAlignment="CENTER" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="14.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" text="부서원 목록" AnchorPane.leftAnchor="170.0" />
+                  <TableView fx:id="empTable" layoutX="97.0" layoutY="117.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+                    <columns>
+                      <TableColumn fx:id="empIdColumn" prefWidth="103.0" text="사원번호" />
+                      <TableColumn fx:id="empNameColumn" prefWidth="110.0" text="사원이름" />
+                        <TableColumn fx:id="empJobColumn" prefWidth="103.0" text="업무" />
+                        <TableColumn fx:id="empSalaryColumn" prefWidth="100.0" text="급여" />
+                    </columns>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
