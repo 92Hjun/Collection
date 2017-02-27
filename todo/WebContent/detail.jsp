@@ -1,5 +1,15 @@
+<%@page import="todo.TodoVO"%>
+<%@page import="todo.TodoDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" session="false"%>
+<%
+	TodoDAO dao = new TodoDAO();
+	int detailNo = Integer.parseInt(request.getParameter("detailNo"));
+	TodoVO todo = dao.detailTodo(detailNo);
+	int pno = Integer.parseInt(request.getParameter("pno"));
+%>
+    
+    
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -30,29 +40,31 @@
 						<col width="20%">
 						<col width="*">
 						</colgroup>
+							
+						
 								<tr>
-									<th>종류</th><td>개인</td>
+									<th>종류</th><td><%=todo.getCategory() %></td>
 								</tr>
 								<tr>
-									<th>제목</th><td>장보기</td>
+									<th>제목</th><td><%=todo.getTitle() %></td>
 								</tr>
 								<tr>
-									<th>내용</th><td>오늘내로 장보기</td>
+									<th>내용</th><td><%=todo.getDescription() %></td>
 								</tr>
 								<tr>
-									<th>장소</th><td>마트</td>
+									<th>장소</th><td><%=todo.getLocation() %></td>
 								</tr>
 								<tr>
-									<th>일시</th><td>2017년 1월 31일</td>
+									<th>일시</th><td><%=todo.getDate() %></td>
 								</tr>
 								<tr>
-									<th>처리 완료 여부</th><td>처리중</td>
+									<th>처리 완료 여부</th><td><%=todo.getCompleted() %></td>
 								</tr>
 						</table>
 					</div>
 					<div class="panel-footer text-right">
 						
-						<a href="main.jsp" class="btn btn-default">목록보기</a>
+						<a href="main.jsp?pno=<%=pno %>" class="btn btn-default">목록보기</a>
 					</div>
 				</div>
 			</div>
